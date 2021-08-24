@@ -3,10 +3,10 @@
 University of Colorado Denver, ELEC 4804/5804, MECH 4228/5228
 </br></br>
 
-# Introduction
+## Introduction
 
-What is a robot?
-How to develop a robot
+What is a robot?</br>
+How to develop a robot</br>
 10 Essential Skills That All Good Roboticists Should Have
 </br></br>
 
