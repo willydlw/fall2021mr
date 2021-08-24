@@ -31,12 +31,8 @@ The python language documentation also contains a set of tutorials and library d
 - The Python Tutorial https://docs.python.org/3/tutorial/index.html 
 - The Python Standard Library  https://docs.python.org/3/library/index.html#library-index 
 
-
-
-You will find there are references to python 2.x and 3.x. There are differences between these versions. Class examples will be written for python 3.x.
-
-
-
+</br>
+You will find there are references to python 2.x and 3.x. There are differences between these versions. Class examples will be written for python 3.x.</br></br>
 
 ### How does python work?
 
@@ -49,13 +45,11 @@ Dynamic typing means that the interpeter determines the validity of variable typ
 The Garbage Collector automatically frees up memory space. It keeps track of the number of references to an object. When the reference count goes down to zero, it deletes the object.
 
 
-The example in lessons 1 - 7 below are intended to introduce you to the python syntax and provide a quick start reference for the language.
-
-<br><br>
+The example in lessons 1 - 7 below are intended to introduce you to the python syntax and provide a quick start reference for the language.<br><br>
 
 ## Lesson 1 - keyboard input, print output, converting strings to int, float
 
-Lesson 1 demonstrates how to read input from the keyboard, convert the data from string to integer or float, and print the data. See lesson1.py.
+Lesson 1 demonstrates how to read input from the keyboard, convert the data from string to integer or float, and print the data. See [lesson1](./lesson1).
 
 
 
@@ -131,9 +125,7 @@ See lesson3.py for example usage
 
 In Python, all the statements indented by the same number of character spaces after a programming construct are considered to be part of a single block of code. Python uses indentation as its method of grouping statements.
 
-See lesson4.py for example usage <br>
-<br><br>
-
+See lesson4.py for example usage <br><br><br>
 
 ## Lesson 5 - loops
 

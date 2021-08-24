@@ -64,7 +64,7 @@ Single line comment start with a #. Everything to the right of a # is considered
 
 ```
 # This is a comment
-print('this code will run')    # this will not run, is a comment
+print('this code will run')    # this is another comment
 ``` 
 <br>
 
