@@ -7,115 +7,30 @@ python style guide: https://www.python.org/dev/peps/pep-0008/
 
 ## lesson1a.py - print string message
 
-A typical first program prints a message to the screen. The print function writes to the screen, also known as standard output. The simplest usage of the print function is passing a character string to the function, as shown below. The character string can be enclosed in single quotes or in double quotes.
+A typical first program prints a message. The print function writes to standard output, which is the screen. The simplest usage of the print function is passing a string literal to the function, as shown below. The string literal can be enclosed in single quotes or in double quotes.
 
 
 ```
 print('line 1')
 print("line 2")
 ```
-<br>
+</br>
 
 **output**
 ```
 line 1
 line 2
 ```
-<br>
+</br>
 
 Library documentation for print:: https://docs.python.org/3/library/functions.html#print 
-<br><br>
+</br></br>
 
-## lesson1b.py - keyboard input
-
-The input function reads a line from the keyboard and returns the data as a string type.
-
-The function prototype: input([ *prompt* ])
-
-The brackets mean the prompt argument is optional. The prompt is a character string, written to standard output, without a trailing newline. 
-
-The example below prompts the user to enter their name. It will be followed by a flashing cursor. The function will return when the user presses the enter key.
-
-```
-input('enter your name')
-```
-<br>
-
-**output**
-```
-enter your name: 
-```
-<br>
-
-The assignment operator, = , assigns the string returned from the input function to a variable. Note that the data type of name will be dynamically typed to a string, the return data type of the input function.
-
-```
-name = input('enter your name')
-```
-<br><br> 
-
-### Comments
-
-Comments are used to make a program readable. Comments are not interpreted as source code. The lesson1b source code and other examples contain comments to aid in your understanding. 
-
-**syntax**
-
-Single line comment start with a #. Everything to the right of a # is considered a comment until the end of a line.<br>
-
-```
-# This is a comment
-print('this code will run')    # this is another comment
-``` 
-<br>
-
-Multiline comments are wrapped inside triple quotes. Can use single or double quotes. 
-
-```
-"""
-comment line 1
-comment line 2
-"""
-```
-<br>
-
-"Writing Comments in Python(Guide)"  https://realpython.com/python-comments-guide/ 
-
-<br>
-
-
-Run the lesson1b.py source code to see how the input function works. The program prints the data returned by the input function. Note the usage of the + operator in the print functions. When used with strings, the + operator appends (concatenates) strings.
-
-The function type(inMsg) returns the data type of the variable inMsg. It does not return a string type, but is converted to a string by passing it to the str function.
-
-```
-inMsg = input('Enter some text: ')
-print("inMsg: " + inMsg)
-print("data type of inMsg: " + str(type(inMsg)))
-```
-<br>
-
-
-Library documentation for input: https://docs.python.org/3/library/functions.html#input
-
-<br><br>
-
-## lesson1c.py - convert user input to integers, floats
-
-The int() and float() constructor functions convert a numeric string argument to a numeric type.
-
-```
-str1 = '10'
-intVal = int(str1)
-
-str2 = '10.5'
-floatVal = float(str2)
-```
-
-### Built-in Data Types
+## Built-in Data Types
 
 Variables can store data of different types, and different types can do different things.
 
-Python has the following data types built-in by default, in these categories:
+Python has the following built-in data types. </br>
 | Category | Data Type |
 | --- | --- |
 | Text Type | str |
@@ -161,11 +76,134 @@ print(type(x))
 ```
 <class 'int'>
 ```
-<br>
+</br>
 
-Example lesson1c.py converts user input to integers and floats. Run the program. What happens if the user inputs alphabetic characters or other non-numeric characters?
+## Variable Names
+
+[PEP8 style guide](https://www.python.org/dev/peps/pep-0008/#function-and-variable-names):  Variable names should be lowercase, with words separated by underscores as necessary to improve readability.</br></br>
+
+## Comments
+
+Comments are used to make a program readable. Comments are not interpreted as source code. The lesson1b source code and other examples contain comments to aid in your understanding. 
+
+**syntax**
+
+Single line comment start with a #. Everything to the right of a # is considered a comment until the end of a line.<br>
+
+```python
+# This line is a comment
+print('this code will run')    # this is another comment
+```
+
+</br>
+
+Multiline comments are wrapped inside triple quotes. Can use single or double quotes.</br>
+
+```python
+"""
+comment line 1
+comment line 2
+"""
+```
+
+</br>
+
+"Writing Comments in Python(Guide)"  https://realpython.com/python-comments-guide/ </br></br>
+
+## lesson1b.py - printing literals of data types
+
+Run the lesson1b program to see the data types of the various literals. How does print() know how to work with all these different types? Well, the short answer is that it doesn’t. It implicitly calls str() behind the scenes to type cast any object into a string.</br>
+
+```python
+print(42)              
+print(type(42))                        # <class 'int'>
+
+print(3.14)
+print(type(3.14))                      # <class 'float'>
+
+print(1 + 2j)  
+print(type(1 + 2j))                    # <class 'complex'>
+
+print(True)
+print(type(True))                      # <class 'bool'>
+
+print([1, 2, 3])
+print(type([1, 2, 3]))                 # <class 'list'>
+
+print({'red', 'green', 'blue'})
+print(type({'red', 'green', 'blue'}))  # <class 'set'>
+
+print({'name':'Baymax', 'age': 3})
+print(type({'name':'Baymax', 'age': 3}))  # <class 'dict'>
+
+print('the end')
+print(type('the end'))                    # <class 'str'>
+```
+
+</br>
+
+## lesson1d.py - keyboard input
+
+The input function reads a line from the keyboard and returns the data as a string type.
+
+The function prototype: input([ *prompt* ])
+
+The brackets mean the prompt argument is optional. The prompt is a character string, written to standard output, without a trailing newline. 
+
+The example below prompts the user to enter their name. It will be followed by a flashing cursor. The function will return when the user presses the enter key.
 
 ```
+input('enter your name')
+```
+<br>
+
+**output**
+```
+enter your name: 
+```
+<br>
+
+The assignment operator, = , assigns the string returned from the input function to a variable. Note that the data type of name will be dynamically typed to a string, the return data type of the input function.
+
+```
+name = input('enter your name')
+```
+<br><br> 
+
+
+
+Run the lesson1c.py source code to see how the input function works. The program prints the data returned by the input function. Note the usage of the + operator in the print functions. When used with strings, the + operator appends (concatenates) strings.
+
+The function type(inMsg) returns the data type of the variable inMsg. It does not return a string type, but is converted to a string by passing it to the str function.
+
+```python
+inMsg = input('Enter some text: ')
+print("inMsg: " + inMsg)
+print("data type of inMsg: " + str(type(inMsg)))
+```
+
+</br>
+
+
+Library documentation for input: https://docs.python.org/3/library/functions.html#input </br></br>
+
+## lesson1d.py - convert user input to integers, floats
+
+The int() and float() constructor functions convert a numeric string argument to a numeric type.
+
+```python
+str1 = '10'
+intVal = int(str1)
+
+str2 = '10.5'
+floatVal = float(str2)
+```
+
+</br>
+
+Example lesson1d.py converts user input to integers and floats. Run the program. What happens if the user inputs alphabetic characters or other non-numeric characters?
+
+```python
 # convert the string to an integer
 # if you type a non-numeric value, the conversion to int will fail
 integerValue1 = int(input("\nenter integer value: "))
@@ -183,4 +221,5 @@ floatValue1 = float(input("\nenter float value: "))
 print("integerValue1: " + str(floatValue1))
 print("data type of floatValue1: " + str(type(floatValue1)))
 ```
+
 <br><br>

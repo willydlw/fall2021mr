@@ -1,15 +1,23 @@
-''' 
-lesson1b 
-   input function reads from the keyboard
-   returns a string type
-   assignment operator - stores data returned in a variable
-   type() returns data type
-   str() converts to string
-   concatentation operator + adds two strings together
-'''
+print(42)              
+print(type(42))                        # <class 'int'>
 
+print(3.14)
+print(type(3.14))                      # <class 'float'>
 
-inMsg = input('Enter some text: ')
-print("inMsg: " + inMsg)
-print("data type of inMsg: " + str(type(inMsg)))
+print(1 + 2j)  
+print(type(1 + 2j))                    # <class 'complex'>
 
+print(True)
+print(type(True))                      # <class 'bool'>
+
+print([1, 2, 3])
+print(type([1, 2, 3]))                 # <class 'list'>
+
+print({'red', 'green', 'blue'})
+print(type({'red', 'green', 'blue'}))  # <class 'set'>
+
+print({'name':'Baymax', 'age': 3})
+print(type({'name':'Baymax', 'age': 3}))  # <class 'dict'>
+
+print('the end')
+print(type('the end'))                    # <class 'str'>
