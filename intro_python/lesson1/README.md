@@ -142,7 +142,7 @@ print(type('the end'))                    # <class 'str'>
 
 </br>
 
-## lesson1d.py - keyboard input
+## lesson1c.py - keyboard input
 
 The input function reads a line from the keyboard and returns the data as a string type.
 
@@ -152,25 +152,26 @@ The brackets mean the prompt argument is optional. The prompt is a character str
 
 The example below prompts the user to enter their name. It will be followed by a flashing cursor. The function will return when the user presses the enter key.
 
-```
+```python
 input('enter your name')
 ```
-<br>
+
+</br>
 
 **output**
 ```
 enter your name: 
 ```
-<br>
+
+</br>
 
 The assignment operator, = , assigns the string returned from the input function to a variable. Note that the data type of name will be dynamically typed to a string, the return data type of the input function.
 
-```
+```python
 name = input('enter your name')
 ```
-<br><br> 
 
-
+</br>
 
 Run the lesson1c.py source code to see how the input function works. The program prints the data returned by the input function. Note the usage of the + operator in the print functions. When used with strings, the + operator appends (concatenates) strings.
 
