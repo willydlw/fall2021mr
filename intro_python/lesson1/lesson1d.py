@@ -1,4 +1,4 @@
-# lesson1c - converts strings to integer, float 
+# lesson1d - converts strings to integer, float 
 
 # convert the string to an integer
 # if you type a non-numeric value, the conversion to int will fail

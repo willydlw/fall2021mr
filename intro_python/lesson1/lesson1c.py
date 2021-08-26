@@ -1,5 +1,5 @@
 ''' 
-lesson1b 
+lesson1c 
    input function reads from the keyboard
    returns a string type
    assignment operator - stores data returned in a variable
