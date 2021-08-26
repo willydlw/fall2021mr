@@ -1,4 +1,4 @@
-# lesson 6e - arbitrary keyword arguments
+# lesson 5e - arbitrary keyword arguments
 
 # aribtrary keyword arguments, **kwargs
 def print_knames(**person):

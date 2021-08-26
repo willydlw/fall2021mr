@@ -1,13 +1,13 @@
-# Lesson 7 - python lists
+# Lesson 6 - python lists
 
 A list is a data structure in Python that is a mutable, or changeable, ordered sequence of elements. Each element or value that is inside of a list is called an item. Just as strings are defined as characters between quotes, lists are defined by having values between square brackets [ ].
 
 A list is not the same as an array, as arrays contain objects of the same data type. Python does not have built-in support for arrays. In a later lesson, we will learn how to use the numpy library for arrays.
 
 https://docs.python.org/3/library/stdtypes.html#typesseq-list 
-<br><br>
+</br></br>
 
-## lesson7a.py - Getting started with lists
+## lesson6a.py - Getting started with lists
 
 - Create a list that contains string data types. 
 - Print the object's data type. 
@@ -15,7 +15,7 @@ https://docs.python.org/3/library/stdtypes.html#typesseq-list
 
 Lists may be constructed in several ways. The example below creates a list using square brackets, separating items with commas: [a, b, c]
 
-```
+```python
 # create a list that contains string data types
 school_supplies = ['pencil', 'paper', 'glue', 'calculator', 'notebook']
 
@@ -25,7 +25,8 @@ print("type(school_supplies) ", type(school_supplies))
 # print all items in the list
 print(school_supplies)
 ```
-<br>
+
+</br>
 
 **output**
 
@@ -33,7 +34,8 @@ print(school_supplies)
 type(school_supplies)  <class 'list'>
 ['pencil', 'paper', 'glue', 'calculator', 'notebook']
 ```
-<br>
+
+</br>
 
 Each item in a list corresponds to an index number, which is an integer value, starting with the index number 0.
 
@@ -49,7 +51,7 @@ Because each item in a Python list has a corresponding index number, we’re abl
 
 Now we can access a discrete item of the list by referring to its index number:
 
-```
+```python
 # access list items by index number
 print("\naccess list item at index 2")
 print(school_supplies[2])
@@ -67,14 +69,14 @@ paste
 
 A for loop can be used to iterate through the list sequence.
 
-```
+```python
 for iterating_var in sequence:
    statements(s)
 ```
 
 s is the iterator variable that provides access to the list item.
 
-```
+```python
 # iterate through the list, access each object individually
 print("\niterating through list with for loop")
 for s in school_supplies:
@@ -91,17 +93,18 @@ calculator
 notebook
 
 ```
-<br><br>
 
-## lesson7b.py - sort list of integers
+</br></br>
+
+## lesson6b.py - sort list of integers
 
 Python dyanmically types variables. The example below shows the numbers in the list are typed as integers. The list class sort method is used to sort the list in ascending order.
 
-The list data type has several methods. See https://docs.python.org/3/tutorial/datastructures.html for the available methods of list objects. <br>
+The list data type has several methods. See https://docs.python.org/3/tutorial/datastructures.html for the available methods of list objects. </br>
 
 
-```
-# lesson 7b 
+```python
+# lesson 6b 
 #   create a list of integers
 #   sort the list
 
@@ -119,7 +122,8 @@ for v in myIntList:
 myIntList.sort()
 print("\nsorted list: ", myIntList)
 ```
-<br>
+
+</br>
 
 **output**
 ```
@@ -135,15 +139,16 @@ v:  0 <class 'int'>
 
 sorted list:  [-13, -2, 0, 3, 6, 7]
 ```
-<br><br>
+
+</br></br>
 
 
 
-## lesson7c.py - list method append
+## lesson6c.py - list method append
 
 The example below demonstrates creating an empty list and appending items to the end of the list. Experiment with the program to watch the list grow.
 
-```
+```python
 # create an empty list
 myList = []
 

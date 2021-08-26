@@ -1,4 +1,4 @@
-# lesson6f - default parameter value
+# lesson 5f - default parameter value
 
 # default parameter value
 def my_university(school = "CU Denver"):

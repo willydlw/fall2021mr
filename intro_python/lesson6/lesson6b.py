@@ -1,4 +1,4 @@
-# lesson 7b 
+# lesson 6b 
 #   create a list of integers
 #   sort the list
 

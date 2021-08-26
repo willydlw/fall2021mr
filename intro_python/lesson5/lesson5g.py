@@ -1,4 +1,4 @@
-# lesson6g - returning data from a function
+# lesson 5g - returning data from a function
 
 import math       # sin, cos, pi 
 

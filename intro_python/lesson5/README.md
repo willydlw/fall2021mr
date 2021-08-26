@@ -1,10 +1,10 @@
-# Lesson 6 - functions
+# Lesson 5 - functions
 
 A function is a block of code that only runs when it is called. Data can be passed to a function's parameters. A function can also return data.
 <br><br>
 
 
-## lesson6a.py - define a function with no parameters, call the function
+## lesson5a.py - define a function with no parameters, call the function
 
 A function is defined using the **def** keyword, followed by the function name, parentheses, optional parameters inside the parentheses and a colon. 
 
@@ -30,7 +30,7 @@ hello from hello_function
 ```
 <br><br>
 
-## lesson6b.py - functions with parameters
+## lesson5b.py - functions with parameters
 
 The example function has one parameter in the list. The parameter name is msg. When the function is called, the argument data in the function call will be passed to the function parameter. The function does not return any data.<br>
 
@@ -70,14 +70,14 @@ Bart Simpson
 
 <br><br>
 
-## lesson6c.py -  Arbitrary Arguments, *args
+## lesson5c.py -  Arbitrary Arguments, *args
 
 If you do not know how many arguments will be passed into a function, add a * before the parameter name in the function definition. The function will receive a *tuple* of arguments and can access the items accordingly. (A tuple is a collection of objects which ordered and immutable.)
 
 Note this is an advanced concept which you will likely not code in the class, but will see *args in python library function definitions. The main takeaway is to understand that *args means you can pass an arbitrary number of arguments to the function.
-<br>
+</br>
 
-```
+```python
 # arbitrary arguments, *args
 def some_function(*names):
    print('there are ' + str(len(names)) + ' names')
@@ -87,7 +87,8 @@ def some_function(*names):
 # call some_function.
 some_function('Bart', 'Homer', 'Marge', 'Lisa')
 ```
-<br>
+
+</br>
 
 **output**
 ```
@@ -97,13 +98,14 @@ Homer
 Marge
 Lisa
 ```
-<br><br>
 
-## lesson6d.py - Keyword Arguments, key=value
+</br></br>
+
+## lesson5d.py - Keyword Arguments, key=value
 
 Arguments do not have to be in the same order as the parameters when using key = value syntax. Below, the value passed to c is defined in the function call as c = 9. Similarly, the values for b and a are defined with key=value syntax.
 
-```
+```python
 # keyword arguments
 def average_of_three(a, b, c):
    avg = (a+b+c)/3
@@ -113,22 +115,23 @@ def average_of_three(a, b, c):
 # does not require that we pass arguments in same order as parameters
 average_of_three(c = 9, a = 7, b = 4)
 ```
-<br>
+
+</br>
 
 **output**
 
 ```
 average of a: 7, b: 4, c: 9 is 6.666666666666667
 ```
-<br><br>
+</br></br>
 
-## lesson6e.py -  Arbitrary Keyword Arguments, **kwargs
+## lesson5e.py -  Arbitrary Keyword Arguments, **kwargs
 
 If you do not know how many keyword arguments will be passed into your function, add two asterisk: ** before the parameter name in the function definition.
 
 The function will receive a dictionary of arguments, and can access the items accordingly.
 
-```
+```python
 # aribtrary keyword arguments, **kwargs
 def print_knames(**person):
    print("Last name is " + person["lname"])
@@ -136,19 +139,21 @@ def print_knames(**person):
 # call function, specify keyword arugments
 print_knames(fname='Charlie', lname = 'Brown')
 ```
-<br>
+
+</br>
 
 **output**
 ```
 Last name is Brown
 ```
-<br><br>
 
-## lesson6f.py -  Default Parameter Value
+</br></br>
+
+## lesson5f.py -  Default Parameter Value
 
 Default values may be assigned to a parameter, when the function is called without an argument.
 
-```
+```python 
 # default parameter value
 def my_university(school = "CU Denver"):
    print("My university is " + school)
@@ -160,20 +165,22 @@ my_university()
 my_university("Montana State")
 
 ```
-<br>
+
+</br>
 
 **output**
 ```
 My university is CU Denver
 My university is Montana State
 ```
-<br><br>
 
-## lesson6g.py -  Return Values
+</br></br>
+
+## lesson5g.py -  Return Values
 
 Use the return statement to return data. python allows returning multiple objects from a function. When returning more than one object, comma separate the list. The example below imports the math library to access the sin, cos functions and the constant pi.
 
-```
+```python
 import math       # sin, cos, pi 
 
 # return one value
@@ -193,21 +200,24 @@ def find_xy(radius, angle):
 a, b = find_xy(9, math.pi)
 print("a: {}, b: {}".format(a,b))
 ```
-<br>
 
-**output** <br>
-Note: We expect b's value to be zero as the sin(pi) is 0. Due to floating point precision limitations, we see a value very close to zero, but not exaclty zero. <br>
+</br>
+
+**output** </br>
+Note: We expect b's value to be zero as the sin(pi) is 0. Due to floating point precision limitations, we see a value very close to zero, but not exaclty zero. </br>
+
 ```
 scaledVal:  30
 a: -9.0, b: 1.102182119232618e-15
 ```
-<br><br>
 
-## lesson6h.py -  pass statement
+</br></br>
+
+## lesson5h.py -  pass statement
 
 Programmers sometimes define a function before writing the function code. Writing a function with no statements in the body causes an error. The pass statement is used to avoid an error. It allows the function to be called.
 
-```
+```python
 # pass statement allows function to be called
 def emptyFunction():
    pass 

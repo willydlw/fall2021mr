@@ -1,4 +1,4 @@
-# lesson6c - arbitrary number of arguments
+# lesson 5c - arbitrary number of arguments
 
 # arbitrary arguments, *args 
 def some_function(*names):

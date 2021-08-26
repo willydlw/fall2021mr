@@ -1,4 +1,4 @@
-# lesson 7c- append to list
+# lesson 6c- append to list
 
 # create an empty list
 myList = []

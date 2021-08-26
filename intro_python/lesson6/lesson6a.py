@@ -1,4 +1,4 @@
-# lesson 7a - getting started with lists
+# lesson 6a - getting started with lists
 
 # create a list that contains string data types
 school_supplies = ['pencil', 'paper', 'glue', 'calculator', 'notebook']

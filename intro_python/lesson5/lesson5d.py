@@ -1,4 +1,4 @@
-# lesson6d - keyword arguments
+# lesson 5d - keyword arguments
 def average_of_three(a, b, c):
    avg = (a+b+c)/3
    print('average of a: {}, b: {}, c: {} is {}'.format(a,b,c,avg))

@@ -1,4 +1,4 @@
-# lesson 6a - define a function with no parameters, call the function
+# lesson 5a - define a function with no parameters, call the function
 
 # define function with no parameters
 def hello_function():

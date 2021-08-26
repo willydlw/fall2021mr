@@ -1,4 +1,4 @@
-# lesson 6h - pass statement
+# lesson 5h - pass statement
 
 # pass statement allows function to be called
 def emptyFunction():
