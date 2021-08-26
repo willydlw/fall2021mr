@@ -88,11 +88,11 @@ See lesson2.py for example usage
 - An if statement consists of a boolean expression followed by one or more statements.
 - An if statement can be followed by an optional else statement, which executes when the boolean expression is FALSE.
 - nested if statements
-- - You can use one if or else if statement inside another if or else if statement(s).
+   - You can use one if or else if statement inside another if or else if statement(s).
 
 In Python, all the statements indented by the same number of character spaces after a programming construct are considered to be part of a single block of code. Python uses indentation as its method of grouping statements.
 
-See lesson3.py for example usage <br><br><br>
+See lesson3.py for example usage </br></br>
 
 ## Lesson 4 - loops
 

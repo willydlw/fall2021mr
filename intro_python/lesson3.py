@@ -1,4 +1,4 @@
-# lesson 4: if else if else  logic example
+# lesson 3: if elif else logic example
 
 
 x = int(input('enter an integer: '))

@@ -1,36 +1,36 @@
-# Lesson 5 - loops
+# Lesson 4 - loops
 
-Programming statements are generally executed sequentially. The first statement in a function is executed first, followed by the second, and so on. There are situations when a block of code needs to be executed more than once. A loop statement allows us to execute a statement or group of statements multiple times. The following diagram illustrates a loop statement.
+Programming statements are generally executed sequentially. The first statement in a function is executed first, followed by the second statement, and so on. There are situations when a block of code needs to be executed more than once. A loop statement allows us to execute a statement or group of statements multiple times. The following diagram illustrates a loop statement.
 <br><br>
 
 ![loop structure](./images/loop_architecture.jpg) [1](https://www.tutorialspoint.com/python3/images/loop_architecture.jpg)
 
-<br><br>
+</br></br>
 
 The python language two types of loops and allows nesting of loops.
 - while loop
 - for loop
-<br><br>
+</br></br>
 
 ## while loop
 
 Repeats a statement or group of statements while a given condition is TRUE. It tests the condition before executing the loop body.
 
 ![while loop](./images/python_while_loop.jpg) [2](https://www.tutorialspoint.com/python3/images/python_while_loop.jpg)
-<br><br>
+</br></br>
 
 **syntax**
-```
+```python 
 while expression:
    statement(s)
 ```
-<br>
+</br>
 
-Note: statement(s) inside the body of the loop must be indented with a tab.<br><br>
+Note: statement(s) inside the body of the loop must be indented with a tab.</br></br>
 
-### lesson5a.py
+### lesson4a.py
 
-```
+```python
 count = 0
 
 print("before loop")
@@ -41,7 +41,8 @@ while (count < 3):
 
 print("after loop")
 ```
-<br>
+
+</br>
 
 **output**
 
@@ -52,28 +53,49 @@ while loop, count:  1
 while loop, count:  2
 after loop
 ```
-<br><br>
+
+</br></br>
 
 ## for loop
 
-The for statement in Python has the ability to iterate over the items of any sequence, such as a list or a string. <br>
-<br>
+The for statement in Python has the ability to iterate over the items of any sequence, such as a list or a string. </br></br>
 
 ![for loop](./images/python_for_loop.jpg) [3](https://www.tutorialspoint.com/python3/images/python_for_loop.jpg)
-<br><br>
+</br></br>
 
 
 **syntax**
 
-```
+```python
 for iterating_var in sequence:
    statements(s)
 ```
-<br>
+
+</br>
 
 If a sequence contains an expression list, it is evaluated first. Then, the first item in the sequence is assigned to the iterating variable iterating_var. Next, the statements block is executed. Each item in the list is assigned to iterating_var, and the statement(s) block is executed until the entire sequence is exhausted.
 
-Python has several data structures that may contain a sequence of items. The next tutorial, lesson 6, discusses the list data structure.<br><br>
+Python has several data structures that may contain a sequence of items. The next tutorial, lesson 6, discusses the list data structure.</br></br>
+
+### for loop with range
+
+In the for loop shown below, the range() function creates an iterator named i. The iterator values increases each time through the loop. The number 2 in parentheses is the argument we pass to the range function to control its behavior. range(2) creates a sequence of two numbers: 0 and 1. For each of these two numbers, the for command performs the action(s) specified after the colon.
+
+The actions to be repeated in the for loop are indented. Indentation tells python which lines are inside the loop.
+
+```python
+for i in range(2):
+   print(i)
+```
+
+The values of i are printed as output. What do you think the output will be if you change range(2) to range(4)?
+
+```
+0
+1
+```
+
+</br></br>
 
 ### lesson5b.py 
 
