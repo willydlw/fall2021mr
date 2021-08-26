@@ -15,11 +15,10 @@ How to develop a robot</br>
 There are 6 lessons that serve as a quickstart introduction to python syntax. 
 
 - Lesson 1 - keyboard input, print output, converting strings to int, float, comments
-- Lesson 2 - Formatting output using String modulo operator(%) 
-- Lesson 3 - arithmetic operators
-- Lesson 4 - comparison operators, if statements
-- Lesson 5 - loops
-- Lesson 6 - functions
-- Lesson 7 - lists
+- Lesson 2 - arithmetic operators
+- Lesson 3 - comparison operators, if statements
+- Lesson 4 - loops
+- Lesson 5 - functions
+- Lesson 6 - lists
 <br><br> 
 
