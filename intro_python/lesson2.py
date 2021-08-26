@@ -20,3 +20,8 @@ print ("a: %d, b: %d, a %% b: %d" % (a, b, a % b))
 
 # exponentiation operator **
 print ("a: %d, b: %d, a ** b: %d" % (a, b, a ** b))
+
+# floor division operator //
+print ("%.1f // %.1f is %.1f" % (11.0, 3.0, 11.0//3.0))
+
+print ("%d // %d is %d" % (-9, 2, -9//2))
