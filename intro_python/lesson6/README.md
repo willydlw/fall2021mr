@@ -1,217 +1,162 @@
-# Lesson 6 - functions
+# Lesson 7 - python lists
 
-A function is a block of code that only runs when it is called. Data can be passed to a function's parameters. A function can also return data.
+A list is a data structure in Python that is a mutable, or changeable, ordered sequence of elements. Each element or value that is inside of a list is called an item. Just as strings are defined as characters between quotes, lists are defined by having values between square brackets [ ].
+
+A list is not the same as an array, as arrays contain objects of the same data type. Python does not have built-in support for arrays. In a later lesson, we will learn how to use the numpy library for arrays.
+
+https://docs.python.org/3/library/stdtypes.html#typesseq-list 
 <br><br>
 
+## lesson7a.py - Getting started with lists
 
-## lesson6a.py - define a function with no parameters, call the function
+- Create a list that contains string data types. 
+- Print the object's data type. 
+- Print the list contents
 
-A function is defined using the **def** keyword, followed by the function name, parentheses, optional parameters inside the parentheses and a colon. 
-
-The following example defines a function that prints a message when called. It has no arguments and does not return any data. Statements inside the function body are indented with a tab. Note that the function is defined in the program before it is called. Think of the python interpreter as starting at the top of the file and reading through all the code in the file. When it reads the function definition, it registers its existence, but knows not to execute the code until the function is called. The programming statement `hello_function()` is the function call that causes control flow to execute the code contained in the function.
+Lists may be constructed in several ways. The example below creates a list using square brackets, separating items with commas: [a, b, c]
 
 ```
-# define function with no parameters
-def hello_function():
-   # function may contain multiple statements
-   # this simple example uses only a print statement
-   print('hello from hello_function')
+# create a list that contains string data types
+school_supplies = ['pencil', 'paper', 'glue', 'calculator', 'notebook']
 
-# code begins execution here
-# call function hello_function
-hello_function()
+# what is the school_supplies data type?
+print("type(school_supplies) ", type(school_supplies))
+
+# print all items in the list
+print(school_supplies)
 ```
 <br>
 
 **output**
 
 ```
-hello from hello_function
+type(school_supplies)  <class 'list'>
+['pencil', 'paper', 'glue', 'calculator', 'notebook']
 ```
-<br><br>
+<br>
 
-## lesson6b.py - functions with parameters
+Each item in a list corresponds to an index number, which is an integer value, starting with the index number 0.
 
-The example function has one parameter in the list. The parameter name is msg. When the function is called, the argument data in the function call will be passed to the function parameter. The function does not return any data.<br>
+For the list school_supplies, the index breakdown looks like this:
+| 'pencil' | 'paper' | 'glue' | 'calculator' | 'notebook' |
+| --- | --- | --- | --- | --- |
+| 0 | 1 | 2 | 3 | 4 |
+
+
+The first item, the string 'pencil' starts at index 0, and the list ends at index 4 with the item 'notebook'.
+
+Because each item in a Python list has a corresponding index number, we’re able to access and manipulate lists in the same ways we can with other sequential data types.
+
+Now we can access a discrete item of the list by referring to its index number:
 
 ```
-# define function with one parameter
-def my_function(msg):
-   print('my_function, msg: ', msg)
-
-# call function my_function, pass 'cat in the hat' as an argument
-# to function parameter msg
-my_function('cat in the hat')
+# access list items by index number
+print("\naccess list item at index 2")
+print(school_supplies[2])
+school_supplies[2] = 'paste'
+print(school_supplies[2])
 ```
 
 **output**
 ```
-my_function, msg:  cat in the hat
-```
-<br>
-The next example function definition has two parameters. Notice the parameter list is comma-separated. When calling the function, the program must pass two arguments. There is a one-to-one correspondence in the order of assigments. The first argument in the function call is assigned to the first parameter. The second argument in the function call is assigned to the second parameter. 
+access list item at index 2
+glue
+paste
 
 ```
-def print_names(fname, lname):
-   print(fname + " " + lname)
 
-# call function print_names. Pass two arguments to its parameters
-# When calling the function, it expects two arguments because the 
-# function was defined with two parameters. Try calling it with one or
-# three parameters. You will get an error message.
-print_names('Bart', 'Simpson')
+A for loop can be used to iterate through the list sequence.
+
 ```
-<br>
+for iterating_var in sequence:
+   statements(s)
+```
+
+s is the iterator variable that provides access to the list item.
+
+```
+# iterate through the list, access each object individually
+print("\niterating through list with for loop")
+for s in school_supplies:
+   print(s)
+```
 
 **output**
 ```
-Bart Simpson
-```
+iterating through list with for loop
+pencil
+paper
+paste
+calculator
+notebook
 
-<br><br>
-
-## lesson6c.py -  Arbitrary Arguments, *args
-
-If you do not know how many arguments will be passed into a function, add a * before the parameter name in the function definition. The function will receive a *tuple* of arguments and can access the items accordingly. (A tuple is a collection of objects which ordered and immutable.)
-
-Note this is an advanced concept which you will likely not code in the class, but will see *args in python library function definitions. The main takeaway is to understand that *args means you can pass an arbitrary number of arguments to the function.
-<br>
-
-```
-# arbitrary arguments, *args
-def some_function(*names):
-   print('there are ' + str(len(names)) + ' names')
-   for n in names:
-      print(n)
-
-# call some_function.
-some_function('Bart', 'Homer', 'Marge', 'Lisa')
-```
-<br>
-
-**output**
-```
-there are 4 names
-Bart
-Homer
-Marge
-Lisa
 ```
 <br><br>
 
-## lesson6d.py - Keyword Arguments, key=value
+## lesson7b.py - sort list of integers
 
-Arguments do not have to be in the same order as the parameters when using key = value syntax. Below, the value passed to c is defined in the function call as c = 9. Similarly, the values for b and a are defined with key=value syntax.
+Python dyanmically types variables. The example below shows the numbers in the list are typed as integers. The list class sort method is used to sort the list in ascending order.
 
-```
-# keyword arguments
-def average_of_three(a, b, c):
-   avg = (a+b+c)/3
-   print('average of a: {}, b: {}, c: {} is {}'.format(a,b,c,avg))
+The list data type has several methods. See https://docs.python.org/3/tutorial/datastructures.html for the available methods of list objects. <br>
 
-# call average_of_three, use key=value syntax
-# does not require that we pass arguments in same order as parameters
-average_of_three(c = 9, a = 7, b = 4)
-```
-<br>
-
-**output**
 
 ```
-average of a: 7, b: 4, c: 9 is 6.666666666666667
-```
-<br><br>
+# lesson 7b 
+#   create a list of integers
+#   sort the list
 
-## lesson6e.py -  Arbitrary Keyword Arguments, **kwargs
+myIntList = [6, 3, 7, -2, -13, 0]
+print("original list: ", myIntList)
 
-If you do not know how many keyword arguments will be passed into your function, add two asterisk: ** before the parameter name in the function definition.
+# iterator through the list one item at a time
+# print the list item and its data type
+print("\ndata type of each list item")
+for v in myIntList:
+   print("v: ", v, type(v))
 
-The function will receive a dictionary of arguments, and can access the items accordingly.
 
-```
-# aribtrary keyword arguments, **kwargs
-def print_knames(**person):
-   print("Last name is " + person["lname"])
-
-# call function, specify keyword arugments
-print_knames(fname='Charlie', lname = 'Brown')
+# sort the list
+myIntList.sort()
+print("\nsorted list: ", myIntList)
 ```
 <br>
 
 **output**
 ```
-Last name is Brown
+original list:  [6, 3, 7, -2, -13, 0]
+
+data type of each list item
+v:  6 <class 'int'>
+v:  3 <class 'int'>
+v:  7 <class 'int'>
+v:  -2 <class 'int'>
+v:  -13 <class 'int'>
+v:  0 <class 'int'>
+
+sorted list:  [-13, -2, 0, 3, 6, 7]
 ```
 <br><br>
 
-## lesson6f.py -  Default Parameter Value
 
-Default values may be assigned to a parameter, when the function is called without an argument.
 
-```
-# default parameter value
-def my_university(school = "CU Denver"):
-   print("My university is " + school)
+## lesson7c.py - list method append
 
-# call function, use default value
-my_university()
-
-# call function, pass value to parameter
-my_university("Montana State")
+The example below demonstrates creating an empty list and appending items to the end of the list. Experiment with the program to watch the list grow.
 
 ```
-<br>
+# create an empty list
+myList = []
 
-**output**
-```
-My university is CU Denver
-My university is Montana State
-```
-<br><br>
+# print the number of items in the list and the list contents
+print("empty list")
+print("len(myList): ", len(myList))
+print("myList: ", myList)
 
-## lesson6g.py -  Return Values
+dataRead = 1
 
-Use the return statement to return data. python allows returning multiple objects from a function. When returning more than one object, comma separate the list. The example below imports the math library to access the sin, cos functions and the constant pi.
-
-```
-import math       # sin, cos, pi 
-
-# return one value
-def scale_it(x):
-   return 10 * x 
-
-scaledVal = scale_it(3)
-print("scaledVal: ", scaledVal)
-
-# return two values
-def find_xy(radius, angle):
-   x = radius * math.cos(angle)
-   y = radius * math.sin(angle)
-   return x, y 
-
-# assigns x to a, b to y
-a, b = find_xy(9, math.pi)
-print("a: {}, b: {}".format(a,b))
-```
-<br>
-
-**output** <br>
-Note: We expect b's value to be zero as the sin(pi) is 0. Due to floating point precision limitations, we see a value very close to zero, but not exaclty zero. <br>
-```
-scaledVal:  30
-a: -9.0, b: 1.102182119232618e-15
-```
-<br><br>
-
-## lesson6h.py -  pass statement
-
-Programmers sometimes define a function before writing the function code. Writing a function with no statements in the body causes an error. The pass statement is used to avoid an error. It allows the function to be called.
-
-```
-# pass statement allows function to be called
-def emptyFunction():
-   pass 
-
-# call emptyFunction
-emptyFunction()
+while dataRead != 'q':
+   dataRead = input("\nenter list item or q to quit: ")
+   myList.append(dataRead)
+   print("len(myList): ", len(myList))
+   print("myList: ", myList)
 ```

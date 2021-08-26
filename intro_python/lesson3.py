@@ -1,22 +1,19 @@
-# lesson 3 - Arithmetic Operators
+# lesson 4: if else if else  logic example
 
-a = 10
-b = 3
 
-# addition operater +
-print ("a: %d, b: %d, a + b: %d" %  (a, b, a + b))
+x = int(input('enter an integer: '))
 
-# subtraction operator -
-print ("a: %d, b: %d, a - b: %d" % (a, b, a - b))
+# if (comparison)
+if x < 0:
+   # use tab to indent code to be executed when conditional expression is true
+   # may have one or more statements
+   print('negative')
+   z = x * 2
 
-# multiplication operator *
-print ("a: %d, b: %d, a * b: %d" % (a, b, a * b))
+# elif stands for else if
+elif x == 0:
+   print('zero')
 
-# division operator /
-print ("a: %d, b: %d, a / b: %.2f" %  (a, b, a/b))
-
-# modulus operator
-print ("a: %d, b: %d, a %% b: %d" % (a, b, a % b))
-
-# exponentiation operator **
-print ("a: %d, b: %d, a ** b: %d" % (a, b, a ** b))
+# else executes when every test has been false
+else:
+   print('positive')

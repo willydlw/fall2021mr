@@ -50,43 +50,9 @@ The example in lessons 1 - 7 below are intended to introduce you to the python s
 ## Lesson 1 - keyboard input, print output, converting strings to int, float
 
 Lesson 1 demonstrates how to read input from the keyboard, convert the data from string to integer or float, and print the data. See [lesson1](./lesson1).
+</br></br>
 
-
-
-## Lesson 2 - Formatting output using String modulo operator(%) 
-
-The % operator can also be used for string formatting. It interprets the left argument much like a printf()-style format string to be applied to the right argument. In Python, there is no printf() function but the functionality of the ancient printf is contained in Python. To this purpose, the modulo operator % is overloaded by the string class to perform string formatting. Therefore, it is often called string modulo (or sometimes even called modulus) operator.
-
-```
-# print a with default number of decimal places, f is a placeholder for floating point type
-a = 1.234
-b = 5
-print("a: %f" % (a))
-
-# print a with 1 decimal place
-print("a: %.2f" % (a))
-
-# print b an integer value
-print("b: %d" % (b))
-
-# print two variables. The variables to be substituted into the placeholder are placed
-# in () separated by commas
-msg = 'hello'
-print("msg: %s, b: %d" % (msg, b))
-```
-
-The newer method of formatting uses .format(), where {} become the placeholders, and the arguments are passed to the format function. See example below. https://docs.python.org/3/library/string.html
-
-
-```
-a = 1.234
-b = 5
-print("a: {}".format(a))
-print("a: {}, b: {}".format(a,b))
-```
-<br><br>
-
-## Lesson 3 - Arithmetic Operators
+## Lesson 2 - Arithmetic Operators
 
 | Operator | Description | Example a = 10, b = 20 |
 | --- | --- | --- |
@@ -100,10 +66,10 @@ print("a: {}, b: {}".format(a,b))
 
 https://www.tutorialspoint.com/python/python_basic_operators.htm
 
-See lesson3.py for example usage
+See lesson2.py for example usage
 <br><br>
 
-## Lesson 4 - Comparison Operators, if statements
+## Lesson 3 - Comparison Operators, if statements
 
 | Operator | Description | Example a = 10, b = 20 |
 | --- | --- | --- |
@@ -115,7 +81,7 @@ See lesson3.py for example usage
 | >= | If the value of left operand is greater than or equal to the value of right operand, then condition becomes true. | (a >= b) is not true. |
 | <= | If the value of left operand is less than or equal to the value of right operand, then condition becomes true. | (a <= b) is true. |
 
-<br>
+</br>
 
 **if statements**
 - An if statement consists of a boolean expression followed by one or more statements.
@@ -125,16 +91,16 @@ See lesson3.py for example usage
 
 In Python, all the statements indented by the same number of character spaces after a programming construct are considered to be part of a single block of code. Python uses indentation as its method of grouping statements.
 
-See lesson4.py for example usage <br><br><br>
+See lesson3.py for example usage <br><br><br>
 
-## Lesson 5 - loops
+## Lesson 4 - loops
 
-Lesson 5 directory covers while loops, for loops, and range function.
+Lesson 4 directory covers while loops, for loops, and range function.
 
-## Lesson 6 - functions
+## Lesson 5 - functions
 
-Lesson 6 provides multiple examples of function syntax.
+Lesson 5 provides multiple examples of function syntax.
 
-## Lesson 7 - lists
+## Lesson 6 - lists
 
-Lesson 7 illustrates list creation, appending to end of a list, and sorting a list.
+Lesson 6 illustrates list creation, appending to end of a list, and sorting a list.
