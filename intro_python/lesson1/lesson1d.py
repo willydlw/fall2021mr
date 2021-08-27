@@ -14,5 +14,5 @@ floatValue1 = float(input("\nenter float value: "))
 
 # when using the print function, the + operator appends to
 # a string. The float is converted to a string for printing
-print("integerValue1: " + str(floatValue1))
+print("floatValue1: " + str(floatValue1))
 print("data type of floatValue1: " + str(type(floatValue1)))
