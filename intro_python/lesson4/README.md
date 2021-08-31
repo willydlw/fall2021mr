@@ -75,7 +75,7 @@ for iterating_var in sequence:
 
 If a sequence contains an expression list, it is evaluated first. Then, the first item in the sequence is assigned to the iterating variable iterating_var. Next, the statements block is executed. Each item in the list is assigned to iterating_var, and the statement(s) block is executed until the entire sequence is exhausted.
 
-Python has several data structures that may contain a sequence of items. The next tutorial, lesson 6, discusses the list data structure.</br></br>
+Python has several data structures that may contain a sequence of items. The lesson 6 tutorial discusses the list data structure.</br></br>
 
 ### for loop with range
 
@@ -97,7 +97,7 @@ The values of i are printed as output. What do you think the output will be if y
 
 </br></br>
 
-### lesson5b.py 
+### lesson4b.py 
 
 In the example code below, we create a list named fruits and then use a for loop to access and print each item in the list. The for loop executes if the sequence is not empty. The iterating_var, f, is assigned the first item in the list: 'watermelon', the print function then prints 'watermelon'. The loop continues iterating through the entire sequence, until it reaches the end.
 
@@ -138,7 +138,7 @@ v: 0, type(v): <class 'int'>
 ```
 <br><br>
 
-## lesson5c.py - range function
+## lesson4c.py - range function
 
 range(start, stop[, step])
 
