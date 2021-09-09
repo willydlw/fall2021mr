@@ -1,23 +1,23 @@
 # Arduino Nano 3.x
 
 The Arduino Nano is based on the ATmega328P. It is similar to the Arduino Uno.
-<br><br>
+</br></br>
 
 ![Arduino Nano Top View](./images/nano.jpg "Arduino Nano") [1](https://store-cdn.arduino.cc/usa/catalog/product/cache/1/image/500x375/f8876a31b63532bbba4e781c30024a0a/A/0/A000005_front_2.jpg)
 
-<br> <br>
+</br> </br>
 
 ## Pinout
-<br><br>
+</br></br>
 
 ![Pinout](./images/Nano_PinOut.png "Arduino Nano Pinout") [2](http://www.keywild.com/arduino/gallery/Nano_PinOut.png)
-<br><br>
+</br></br>
 
 
 ## Tech Specs
-<br>
+</br>
 | Tech | Specs |
-| ---  | ---   |
+| --- | --- |
 | Microcontroller | ATmega328 |
 | Operating Voltage | 5 V |
 | Flash Memory | 32 KB of which 2 KB used by bootloader |
@@ -30,7 +30,7 @@ The Arduino Nano is based on the ATmega328P. It is similar to the Arduino Uno.
 | Digital I/O Pins | 22 (6 of which are PWM) |
 | PWM Output | 6 |
 
-<br><br>
+</br></br>
 
 ## Power 
 
@@ -38,13 +38,14 @@ The Arduino Nano is based on the ATmega328P. It is similar to the Arduino Uno.
 - 6-20V unregulated external power supply (pin 30)
 - 5V regulated external power supply (pin 27)
 
-<br><br>
+</br></br>
 
 ## Memory
 
 Non-volatile (information persists when power is turned off)
 - Flash  (programs are stored here)
-- EEPROM (memory space programmers use to store long-term information)
+- EEPROM (memory space programmers use to store long-term information
+          values are kept when the board is turned off )
 
 Volatile (information lost when power cycles)
 - SRAM (static random access memory) This is where the program creates and manipulates variables as it runs
@@ -60,7 +61,7 @@ Volatile (information lost when power cycles)
 
 
 ![Manage SRAM Data](./images/sram.jpeg "Arduino SRAM") [3](https://i.ytimg.com/vi/iOJ52VIvqYM/maxresdefault.jpg)
-<br><br>
+</br></br>
 
 
 ## UART Serial Communication
