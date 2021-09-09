@@ -8,16 +8,16 @@ The Arduino Nano is based on the ATmega328P. It is similar to the Arduino Uno.
 </br> </br>
 
 ## Pinout
+
 </br></br>
 
 ![Pinout](./images/Nano_PinOut.png "Arduino Nano Pinout") [2](http://www.keywild.com/arduino/gallery/Nano_PinOut.png)
 </br></br>
 
-
 ## Tech Specs
-</br>
+
 | Tech | Specs |
-| --- | --- |
+| ---- | ----- |
 | Microcontroller | ATmega328 |
 | Operating Voltage | 5 V |
 | Flash Memory | 32 KB of which 2 KB used by bootloader |
@@ -32,7 +32,7 @@ The Arduino Nano is based on the ATmega328P. It is similar to the Arduino Uno.
 
 </br></br>
 
-## Power 
+## Power  
 
 - Mini-B USB connection
 - 6-20V unregulated external power supply (pin 30)
@@ -59,19 +59,19 @@ Volatile (information lost when power cycles)
             - all local variables declared in the function
         - Data is usable within the function, but the stack memory space is reclaimed when the function exits. 
 
+</br></br>
 
 ![Manage SRAM Data](./images/sram.jpeg "Arduino SRAM") [3](https://i.ytimg.com/vi/iOJ52VIvqYM/maxresdefault.jpg)
 </br></br>
-
 
 ## UART Serial Communication
 
 **UART TTL**
 
-The ATmega328 provide UART TTL (5V) serial communication, which is available on digital pins 0 (RX) and 1 (TX). 
+The ATmega328 provide UART TTL (5V) serial communication, which is available on digital pins 0 (RX) and 1 (TX).
 
 **USB** 
 
-An FTDI FT232RL on the board channels this serial communication over USB and the FTDI drivers (included with the Arduino software) provide a virtual com port to software on the computer. 
+An FTDI FT232RL on the board channels this serial communication over USB and the FTDI drivers (included with the Arduino software) provide a virtual com port to software on the computer.
 
 The RX and TX LEDs on the board will flash when data is being transmitted via the FTDI chip and USB connection to the computer (but not for serial communication on pins 0 and 1).
