@@ -83,5 +83,4 @@ void convertAccelDataToG(ZumoIMU::vector<int16_t> &rawData,
   *   Thus, 16384 is approximately 1g
   *
   */
-   */
 }
