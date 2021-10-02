@@ -1,5 +1,6 @@
 #include <Wire.h>
 #include <ZumoShield.h>
+#include <Arduino.h>
 
 
 void setup(ZumoIMU& imu)
@@ -52,6 +53,16 @@ int main(void)
   ZumoIMU imu;
   ZumoIMU::vector<int16_t> accelRawData = {0,0,0};
   ZumoIMU::vector<float> accelGData = {0.0f,0.0f,0.0f};
+  
+  /* Arduino init function configures
+   *  timers
+   *  analog to digital
+   *  The bootloader connects pins 0 and 1 to the USART; 
+   *  this function disconnects them so they can be used as normal 
+   *  digital i/o; they will be reconnected in Serial.begin()
+   */
+  init();
+  
   setup(imu);
 
   while(1){
