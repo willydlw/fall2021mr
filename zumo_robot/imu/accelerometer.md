@@ -48,8 +48,4 @@ If you only care about measuring tilt using earth's gravity, a ±1.5g accelerome
 <p><b>Sensitivity</b> - The ratio of the change in acceleration (input) to the change in the output signal. Sensitivity is specified at a particular supply voltage and is typically expressed in unit of mV/g for analog-output and LSB/g for digital-ouput. Sensitivity due to temperature change is generally specified as a % change per &deg;C. 
 
 Generally speaking, the more sensitivity the better. This means that for a given change in acceleration, there will be a larger change in signal. Since larger signal changes are easier to measure, you will get more accurate readings.</p>
-<p><b>Bandwidth</b> - Bandwidth information indicates if the accelerometer can measure slow or static accelerations and defines the upper frequency limit where the accelerometer will still be accurate. In  digital-output accelerometers, this defines the rate at which data is sampled. Bandwidth is the highest frequency signal that can be sampled without aliasing. In analog-output accelerometers, bandwidth is defined as the signal frequency at which the response falls to -3 dB of the response to low-frequency acceleration.</p><br><br>
-
-### MPU 6050 Accelerometer Specifications <br><br>
-
-![mpu 6050 accel specs](./images/mpu6050accelspecs.png "mpu 6050 accelerometer specs")<br>
+<p><b>Bandwidth</b> - Bandwidth information indicates if the accelerometer can measure slow or static accelerations and defines the upper frequency limit where the accelerometer will still be accurate. In  digital-output accelerometers, this defines the rate at which data is sampled. Bandwidth is the highest frequency signal that can be sampled without aliasing. In analog-output accelerometers, bandwidth is defined as the signal frequency at which the response falls to -3 dB of the response to low-frequency acceleration.</p></br></br>

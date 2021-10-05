@@ -44,10 +44,4 @@ The gyroscope measures angular rotation about a fixed axis. A triple axis MEMS g
 
 ### Bias
 
-<p>As with any sensor, the values you measure will contain some amount of error or bias. You can see gyro bias by measuring the output when the gyro is still. Though you’d think you would see 0° when the gyro is still, you will always see a slight non-zero error in the output. These errors are sometimes called bias drift or bias instability. The temperature of the sensor greatly affects the bias. To help minimize the source of this error, most gyros have a built in temperature sensor. Thus, you are able to read the temperature of the sensor and correct or any temperature dependent changes. In order to correct for these errors, the gyro must be calibrated. This is usually done by keeping the gyro still and zeroing all of the readings in your code.</p>
-<br>
-<br>
-
-### MPU 6050 Accelerometer Specifications <br><br>
-
-![mpu 6050 gyro specs](./images/gyrompu6050specs.png "mpu 6050 gyro specs")<br>
+<p>As with any sensor, the values you measure will contain some amount of error or bias. You can see gyro bias by measuring the output when the gyro is still. Though you’d think you would see 0° when the gyro is still, you will always see a slight non-zero error in the output. These errors are sometimes called bias drift or bias instability. The temperature of the sensor greatly affects the bias. To help minimize the source of this error, most gyros have a built in temperature sensor. Thus, you are able to read the temperature of the sensor and correct or any temperature dependent changes. In order to correct for these errors, the gyro must be calibrated. This is usually done by keeping the gyro still and zeroing all of the readings in your code.</p>  
