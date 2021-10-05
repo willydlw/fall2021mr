@@ -1,4 +1,4 @@
-/* Purpose: Transmit accel measurements
+/* Purpose: Transmit accel, gyro measurements
  *  
  *  Configuration - ZumoIMU::enableDefault()
  *    Accelerometer: 
@@ -9,9 +9,7 @@
  *      Sets data aquistion rate to 189.4 HZ
  *      enables all axes x,y,z
  *           
- *    Serial - 9600 baud
- *      Transmits using print, println
- *      Formatted to work with Arduino Serial plotter
+ *    Serial - 57600 baud
  *      
  */
 #include <Wire.h>
@@ -37,7 +35,8 @@ void mysetup(ZumoIMU &imu)
     // Failed to detect the sensors and communicate via I2C
     while(1)
     {
-      Serial.println(F("imu failed to initialize"));
+      uint32_t msg = 0xDEADBEEF;
+      Serial.write((byte*)&msg, 4);
       delay(500);
     }
   }
@@ -58,23 +57,62 @@ void mysetup(ZumoIMU &imu)
  
 }
 
-
-/* Format will work with Arduino Serial Plotter */
-void sendData(int16_t x, int16_t y, int16_t z)
+void testSerialSignedWrite(void)
 {
-  Serial.print(x);
-  Serial.print(","); 
-  Serial.print(y);
-  Serial.print(","); 
-  Serial.println(z);
+      if(Serial.availableForWrite() > 15)
+      {
+        int16_t ax, ay, az, gx, gy, gz;
+        int16_t buffer[6];
+        
+        ax = -32768, ay = 32767, az = 16384;
+        gx = -256, gy = 257, gz = -1024;
+        buffer[0] = ax;
+        buffer[1] = ay;
+        buffer[2] = az;
+        buffer[3] = gx;
+        buffer[4] = gy;
+        buffer[5] = gz;
+        
+        Serial.write((byte*)buffer, 12);
+     
+
+      } 
+}
+
+void testSerialUnsignedWrite(void)
+{
+  if(Serial.availableForWrite() > 15)
+      {
+        unsigned int ax, ay, az, gx, gy, gz;
+        unsigned int buffer[6];
+        
+        ax = 0x0123, ay = 0x4567, az = 0x89AB;
+        gx = 0xCDEF, gy = 0xDEAD, gz = 0xBEEF;
+        buffer[0] = ax;
+        buffer[1] = ay;
+        buffer[2] = az;
+        buffer[3] = gx;
+        buffer[4] = gy;
+        buffer[5] = gz;
+        
+        Serial.write((byte*)buffer, 12);
+     
+      } 
 }
 
 
 int main(void)
 {
   ZumoIMU imu;
+  
   unsigned long sensorTime;
   
+
+  int16_t buffer[6];
+
+ 
+  
+
   /* Arduino init function configures
    *  timers
    *  analog to digital
@@ -84,19 +122,33 @@ int main(void)
    */
   init();
   
-  /* Start I2C, Serial, configure imu */
   mysetup(imu);
 
   sensorTime = millis();
  
+
   while(1)
   {
+    
     if((millis() - sensorTime) >= SENSOR_SAMPLE_TIME_INTERVAL)
     {
-      // assuming data is ready to be read
-      imu.readAcc();
-      sendData(imu.a.x, imu.a.y, imu.a.z);
+      //testSerialUnsignedWrite();
+     
+      // assuming data is ready to be read, throwing away magnetometer data
+      imu.read();
+      
       sensorTime = millis();
+
+      if(Serial.availableForWrite() > 11)
+      {
+        buffer[0] = imu.a.x;
+        buffer[1] = imu.a.y;
+        buffer[2] = imu.a.z;
+        buffer[3] = imu.g.x;
+        buffer[4] = imu.g.y;
+        buffer[5] = imu.g.z;
+        Serial.write((byte*)buffer, 12);
+      }
     } 
   }
 
