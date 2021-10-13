@@ -51,9 +51,9 @@ int main()
       x = 0xABCD; //(unsigned int)random(0, 513);
       y = 0x1234; //(unsigned int)random(0, 513);
 
-      /* Create buffer to hold xy bytes
+      /* Directly access variable memory address
+       *  cast to byte pointer and write 2 bytes
        *  sizeof(unsigned int) produced a value of 2 bytes
-       *  Need 4 bytes to store unsigned int
        */ 
       if(Serial.availableForWrite() > 3){
           Serial.write((byte*)&x,2);
