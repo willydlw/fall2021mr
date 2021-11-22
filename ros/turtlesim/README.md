@@ -204,4 +204,4 @@ We've learned how to start the simulation and use the following commands to lear
 
 ## Next
 
-In the next tutorial, we will move the turtle around the display by publishing to the /turtle1/cmd_vel topic.
+In the next tutorial, [publish_cmd_vel](publish_cmd_vel.md), we will move the turtle around the display by publishing to the /turtle1/cmd_vel topic.
