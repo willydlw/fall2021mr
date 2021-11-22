@@ -1,0 +1,26 @@
+<launch>
+   <node 
+      pkg="turtlesim"
+      type="turtlesim_node"
+      name="turtlesim"
+      respawn="false"
+      launch-prefix="xterm -e"
+      output="screen"
+   />
+   <node 
+      pkg="autoturtle" 
+      type="spawn_turtle_client.py"
+      name="spawn_turtle_client"
+      output="screen"
+      launch-prefix="xterm -e"
+      >
+   </node>
+   <node 
+      pkg="autoturtle" 
+      type="teleport_turtle_absolute.py"
+      name="teleport_turtle_client"
+      output="screen"
+      launch-prefix="xterm -e"
+      >
+   </node>
+</launch>

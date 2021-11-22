@@ -1,0 +1,14 @@
+<launch>
+   <node 
+      pkg="turtlesim"
+      type="turtlesim_node"
+      name="turtlesim"
+      respawn="false"
+   />
+   <node 
+      pkg="autoturtle" 
+      type="spawn_turtle_client.py"
+      name="spawn_turtle_client"
+      output="screen">
+   </node>
+</launch>
