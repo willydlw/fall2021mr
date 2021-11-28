@@ -80,4 +80,4 @@ Try some of the provided launch files to see the simulation worlds they open.
 
 </br></br>
 
-The next tutorial, [Keyboard Teleop](.keyboardTeleop.md).
+The next tutorial, [Keyboard Teleop](keyboardTeleop.md).
