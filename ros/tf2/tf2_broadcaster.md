@@ -4,7 +4,7 @@ Description: This tutorial teaches you how to broadcast the state of a robot to 
 
 https://wiki.ros.org/tf2/Tutorials/Writing%20a%20tf2%20broadcaster%20%28Python%29
 
-We will not write the code to reproduce the demo from the tf2 introduction tutorial.
+</br></br>
 
 ## Create a learning_tf2 package
 
@@ -113,6 +113,7 @@ Don't forget to make the script executable.
 chmod +x turtle_tf2_broadcaster.py
 ```
 
+</br>
 
 How do we know the names of each TFMessage field? The rosmsg show command provides that information, as shown below.
 
@@ -120,11 +121,11 @@ How do we know the names of each TFMessage field? The rosmsg show command provid
 rosmsg show tf2_msgs/TFMessage 
 ```
 
+</br>
+
 ![tfmessage](./images/tfmessage.png)
 
 </br>
-
-
 
 This node reads a single parameter "turtle", which specifies a turtle name, e.g. "turtle1" or "turtle2".
 
@@ -145,6 +146,8 @@ cd ~/catkin_ws/learning_tf2/
 mkdir launch
 cd launch
 ```
+
+</br>
 
 The launch file contents are shown below.
 
@@ -176,11 +179,15 @@ catkin_make
 source devel/setup.bash
 ```
 
+</br>
+
 Start the demo
 
 ```bash
 roslaunch learning_tf2 start_demo.launch
 ```
+
+</br>
 
 ### Checking the results
 
@@ -189,6 +196,8 @@ Use the tf_echo tool to check if the turtle pose is actually getting broadcast t
 ```bash
 rosrun tf tf_echo /world /turtle1
 ```
+
+</br>
 
 This should show you the pose of the first turtle. Drive around the turtle using the arrow keys (make sure your terminal window is active, not your simulator window). If you run tf_echo for the transform between the world and turtle 2, you should not see a transform, because the second turtle is not there yet. However, as soon as we add the second turtle in the next tutorial, the pose of turtle 2 will be broadcast to tf2.
 
