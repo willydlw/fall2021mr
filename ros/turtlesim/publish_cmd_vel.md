@@ -91,13 +91,15 @@ You should see the turtle has moved in the positive x direction, as shown in the
 
 ![forward x](./images/forwardx.png)
 
-</br> </br>
+</br>
 
 The turtle was originally spawned at x = 5.54, y = 5.54, theta = 0.0. Use rostopic echo to see its current position. The option -n 1 says to echo it once.
 
 ```bash
 rostopic echo -n 1 /turtle1/pose
 ```
+
+</br>
 
 The turtle's x position is now 7.56, with y and theta remaining the same. Why did the turtle move 2 meters in the x direction? Our published command said to move at a linear velocity of 2 meters/sec. The ros wiki indicates that any published commands are executed for one second only. Thus, our turtle moved 2 meters in that one second time interval. 
 
@@ -109,11 +111,15 @@ linear_velocity: 0.0
 angular_velocity: 0.0
 ```
 
+</br>
+
 We can move the turtle in the reverse x direction, by negating the linear x velocity. Enter the following command:
 
 ```bash
 rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -1 '[-2.0, 0.0, 0.0]' '[0.0, 0.0, 0.0]'
 ```
+
+</br>
 
 We now see the turtle moving to the left, negative x direction, and stopping near its starting position of x = 5.54.
 
@@ -132,6 +138,9 @@ rostopic pub /turtle1/cmd_vel geometry_msgs/Twist -r 1 '[0.0, 0.0, 0.0]' '[0.0, 
 ```
 
 Type Ctrl + C to stop publishing the command and stop the turtle's motion. Reset the simulation with the command
+
+
+</br>
 
 ```bash
 rosservice call /reset
