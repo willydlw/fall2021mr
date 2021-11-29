@@ -8,7 +8,7 @@
       output="screen"
    />
    <node 
-      pkg="autoturtle" 
+      pkg="moveturtle" 
       type="spawn_turtle_client.py"
       name="spawn_turtle_client"
       output="screen"
@@ -16,7 +16,7 @@
       >
    </node>
    <node 
-      pkg="autoturtle" 
+      pkg="moveturtle" 
       type="teleport_turtle_absolute.py"
       name="teleport_turtle_client"
       output="screen"

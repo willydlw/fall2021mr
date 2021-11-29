@@ -6,7 +6,7 @@
       respawn="false"
    />
    <node 
-      pkg="autoturtle" 
+      pkg="moveturtle" 
       type="spawn_turtle_client.py"
       name="spawn_turtle_client"
       output="screen">
