@@ -5,6 +5,6 @@ Turtlesim is a tool made for teaching ROS and ROS packages. The simulation consi
 Work through the following tutorials to become familiar with turtlesim.
 
 1. [Getting Started with TurtleSim](gettingStarted.md)
-2. Move the turtle around the turtlesim window by publishing velocity commands.[publish cmd_vel topic](publish_cmd_vel.md)
+2. Move the turtle around the turtlesim window by publishing velocity commands: [publish cmd_vel topic](publish_cmd_vel.md)
 3. Creating a python publisher node, [swim circle](swim_circle.md)
-4. 
+4. [Go To Goal](go_to_goal.md)
