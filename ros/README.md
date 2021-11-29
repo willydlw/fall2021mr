@@ -10,7 +10,10 @@ This directory contains contains subdirectories of ros tutorials and example cod
 
 2. [Turtlesim](./turtlesim/README.md)
 
-  - Learn how to use ros commands to control the simulation from the command line and from python programs.  
+  - Getting Started
+  - Publish cmd_vel topic
+  - Python publisher node, swim circle
+  - Go To Goal
 
 3. [Transforms](./tf2/README.md)
 
