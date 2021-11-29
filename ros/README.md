@@ -14,6 +14,9 @@ This directory contains contains subdirectories of ros tutorials and example cod
   - Publish cmd_vel topic
   - Python publisher node, swim circle
   - Go To Goal
+  - Turtlesim Services
+  - Launch files
+
 
 3. [Transforms](./tf2/README.md)
 

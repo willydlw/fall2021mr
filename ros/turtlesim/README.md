@@ -8,3 +8,5 @@ Work through the following tutorials to become familiar with turtlesim.
 2. Move the turtle around the turtlesim window by publishing velocity commands: [publish cmd_vel topic](publish_cmd_vel.md)
 3. Creating a python publisher node, [swim circle](swim_circle.md)
 4. [Go To Goal](go_to_goal.md)
+5. [Turtlesim Services](turtlesimServices.md)
+6. [Launch Files](turtlesimLaunch.md)
