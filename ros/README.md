@@ -29,5 +29,7 @@ This directory contains contains subdirectories of ros tutorials and example cod
   - Installing simulation software
   - Gazebo Simulation Worlds
   - Keyboard Teleop
+  - Autonomous Navigation Simulation
+  - Laser Scan listener
 
   
