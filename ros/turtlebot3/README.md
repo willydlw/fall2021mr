@@ -28,3 +28,6 @@ Complete the following tutorials in order.
 
 1. [Installing simulation software](install_sim.md)
 2. [Gazebo Simulation Worlds](gazebo_worlds.md)
+3. [Keyboard Teleop - Gazebo Simulation](keyboardTeleop.md)
+4. [Autonomous Navigation Simulation](autonomousNavSim.md)
+5. [Reading Laser Scan Data](laserScanData.md)
