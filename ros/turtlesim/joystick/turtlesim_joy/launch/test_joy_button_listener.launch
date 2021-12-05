@@ -1,0 +1,13 @@
+<launch>
+
+  <!-- turtlesim and joy node-->
+  <node name="joy" pkg="joy" type="joy_node"/>
+
+  <!-- button_listener node -->
+  <node 
+    name="joy_button_listener" 
+    pkg="turtlesim_joy" 
+    type="joy_button_listener.py" 
+    output="screen"/>
+
+</launch>
