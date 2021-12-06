@@ -1,0 +1,14 @@
+<launch>
+
+  <!-- turtlesim and joy node-->
+  <node name="turtlesim" pkg="turtlesim" type="turtlesim_node"/>
+  <node name="joy" pkg="joy" type="joy_node"/>
+
+  <!-- turtle_joy_swim node interfaces gamepad controller to turtlesim -->
+  <node 
+    name="turtle_joy" 
+    pkg="turtlesim_joy" 
+    type="turtle_joy_swim.py" 
+    output="screen"/>
+
+</launch>
