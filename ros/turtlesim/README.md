@@ -10,3 +10,4 @@ Work through the following tutorials to become familiar with turtlesim.
 4. [Go To Goal](go_to_goal.md)
 5. [Turtlesim Services](turtlesimServices.md)
 6. [Launch Files](turtlesimLaunch.md)
+7. [Joystick Control](./joystick/README.md)
