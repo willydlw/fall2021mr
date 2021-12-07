@@ -1,7 +1,6 @@
-# Reading Laser Scan Data
+# Laser Distance Sensor
 
-Hitachi-LG LDS
-The TurtleBot 3 laser distance sensor rotates in a continuous 360 degrees to collect 2D distance data.
+The TurtleBot 3 Burger has a Hitachi-LG laser distance sensor. The sensor rotates in a continuous 360 degrees to collect 2D distance data.
 
 Basic specifications for the Hitcahi-LG device can be found at http://wiki.ros.org/hls_lfcd_lds_driver?action=AttachFile&do=view&target=LDS_Basic_Specification.pdf.
 
