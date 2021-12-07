@@ -30,4 +30,6 @@ Complete the following tutorials in order.
 2. [Gazebo Simulation Worlds](gazebo_worlds.md)
 3. [Keyboard Teleop - Gazebo Simulation](keyboardTeleop.md)
 4. [Autonomous Navigation Simulation](autonomousNavSim.md)
-5. [Reading Laser Scan Data](laserScanData.md)
+5. [Laser Scan Data](laserScanData.md)
+6. [Plotting Laser Scan Data](plotLaserScanData.md)
+7. [Obstacle Avoidance](avoidObstacle.md)
