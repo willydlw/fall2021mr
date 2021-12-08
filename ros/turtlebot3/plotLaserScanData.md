@@ -8,7 +8,7 @@ Objective: Write a ROS node that subscribes to the /scan topic and plots the las
 The stage_1 gazebo simulation world is used for this example.
 
 ```bash
-roslaunch turtlebot3_stage_1.launch
+roslaunch turtlebot3_gazebo turtlebot3_stage_1.launch
 ``` 
 
 </br>

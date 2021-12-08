@@ -8,7 +8,7 @@ The following is a logically simple method for determining a heading away from o
 The stage_2 gazebo simulation world is used for this example.
 
 ```bash
-roslaunch turtlebot3_stage_2.launch
+roslaunch turtlebot3_gazebo turtlebot3_stage_2.launch
 ``` 
 
 ![stage 2 world](./images/stage_2_world.png)
@@ -263,24 +263,11 @@ Type ctrl + c to stop the node.
 
 Shutdown the stage 2 world and then launch the empty world. Place obstacles in various locations to observe the obstacle avoidance headings calculated.
 
-</br>
-
-![box added](./images/box_added.png)
-
-</br></br>
-
-Run the polar plot program again. The plot screenshot below shows that angle 0 degrees corresponds to the robot's x-axis.
-
 ```bash
-rosrun laser_tutorial laser_polar_plot.py
+roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
 ```
+
 </br>
-
-![box plot](./images/box_plot.png)
-
-</br></br>
-
-Experiment by add other obstacles to the world to see that 90 degrees is to the robot's left, 180 degrees is behind the robot, and 270 degrees is to the robot's right.
 
 The screenshot below shows an obstacle placed approximately 2.5 meters in front of the turtlebot. The distance threshold in the config file was changed to 3.5 meters.
 
